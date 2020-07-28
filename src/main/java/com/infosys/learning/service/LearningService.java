@@ -26,4 +26,15 @@ public class LearningService {
         }
         return person;
     }
+    public String getNameV3(String name){
+
+        String fullName = "Not identified";
+
+        if ("Haiqal".equals(name)){
+            fullName = " rifki haiqal";
+        } else if ( "jane".equals(name)){
+            fullName = "jane doe";
+        }
+        return fullName;
+    }
 }
