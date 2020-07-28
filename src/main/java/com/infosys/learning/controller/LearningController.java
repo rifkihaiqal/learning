@@ -1,6 +1,7 @@
 package com.infosys.learning.controller;
 
 
+import com.infosys.learning.dto.Person;
 import com.infosys.learning.service.LearningService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,5 +19,9 @@ public class LearningController {
     @GetMapping
     public String getPersonName(@RequestParam(value = "gender")String gender){
         return learningService.getName(gender);
+    }
+    @GetMapping(value="/getpersonnamev2")
+    public Person getPersonNameV2(@RequestParam(value = "gender", defaultValue = "gender")String gender){
+        return learningService.getNameV2(gender);
     }
 }

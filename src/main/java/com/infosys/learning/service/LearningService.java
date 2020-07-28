@@ -16,4 +16,14 @@ public class LearningService {
         }
         return person.getName();
     }
+    public Person getNameV2(String gender){
+        Person person = new Person();
+
+        if ("man".equals(gender)){
+            person.setName("Haiqal");
+        } else {
+            person.setName("Sukma");
+        }
+        return person;
+    }
 }
